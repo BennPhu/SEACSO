@@ -1,0 +1,22 @@
+<ul> unorder list
+<li> list item
+<ol> order list
+<a> adress 
+<href> hyperlink reference 
+
+
+in <ul> there are type="circle, square, ...."
+in <ol> there are alphabet (type="a" or "A"), Latin letter (type="I" or "i")
+<ol reverse type"...">
+		Reverse the order 
+
+
+We can put 2 list in side each other:
+<ul>
+                    <li>
+                        Coffee 
+                        <ul type="circle">
+                            <li> Cappuccino</li>
+
+                        </ul>
+                    </li>
