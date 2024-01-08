@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function cal(){
+        x = document.getElementById('loan').value;
+        y = document.getElementById('interest').value;
+        n = document.getElementById('year').value;
+
+        x_fl = parseFloat(x);
+        y_fl= parseFloat(y) / 100;
+        n_fl = parseFloat(n);
+        
+        oneyear = (x_fl * y_fl);
+        result = (x_fl + n_fl * oneyear);
+
+        // document.write(sum);
+        document.getElementById('res').innerHTML = result + " triệu đồng";
+    }
+
+
+</script>
+
+
+<body>
+    <table>
+        <tr>
+            <td>Số Tiền Vay (triệu)</td>
+            <td><input type="text" id="loan"></td>
+        </tr>
+
+        <tr>
+            <td>Phần trăm lãi suất (%)</td>
+            <td><input type="text" id="interest"></td>
+        </tr>
+
+        <tr>
+            <td>Số năm dự tính (năm)</td>
+            <td><input type="text" id="year"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="cal()">Tính toán kết quả</button>
+            </td>
+            <td>
+                <div id="res">Kết quả: ......</div>
+            </td>
+        </tr>
+        
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // var x; //Create a variable
+    // x = parseInt("12") + 34.5; //Convert a string to a whole number
+    // document.write(x); //print
+
+    // function Sum(x, y){
+    //     tong = x + y;
+    //     return tong;
+    // }
+    // var x = Sum(10, 5);
+    // document.write(x);
+
+    function check(){
+        x = document.getElementById('num_1').value;
+        y = document.getElementById('num_2').value;
+
+        x_int = parseInt(x);
+        y_int= parseInt(y);
+        sum = (x_int + y_int);
+        // document.write(sum);
+        document.getElementById('res').innerHTML = "Result: " + sum;
+    }
+
+
+</script>
+
+
+<body>
+    <input type="text" id="num_1">
+    <input type="text" id="num_2">
+    <button onclick="check()">Check</button>
+    <div id="res"></div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script>
+        function nhuan(){;
+            takeinput = document.getElementById("year").value;
+            convert = parseInt(takeinput);
+
+            if (convert %4 === 0){
+                if (convert %100 != 0){
+                    document.getElementById('result').innerHTML = "Năm Nhuận";
+                }
+                else {
+                    if (convert %100 === 0){
+                        if (convert %400 === 0){
+                            document.getElementById('result').innerHTML = "Năm Nhuận";
+                        }
+                        else {
+                            document.getElementById('result').innerHTML = "Năm Bình Thường";
+
+                    }
+                    }
+                }
+            }
+            else{
+                if (convert %1 != 0){
+                    document.getElementById('result').innerHTML = " Lỗi kết quả! Vui Lòng Nhập Số Năm";
+                }
+                else{
+                    document.getElementById('result').innerHTML = "Năm Bình Thường";
+                }
+
+            }
+        
+        }   
+    </script>
+
+    <style>
+        body{
+            font-family:monospace;
+            text-align: center;
+            background-color: mintcream;
+        }
+        .head{
+            font-size: 20px;
+            padding-bottom: 10px;;
+
+        }
+        .answer{
+            padding-top: 25px;
+        }
+            
+        .result_box{
+            padding-top: 20px;
+            font-size: 30px;
+            color: red;
+        }
+        .calculator{
+            border:black;
+            border-radius: 2px;
+            
+        }
+    </style>
+    <body>
+        <div>
+            <div class="head">
+                <h1>MÁY TÍNH NĂM NHUẬN</h1>
+            </div>
+
+            <div class="calculator">
+            <div class="input">
+            
+            Nhập số năm:
+            <input type="text" id="year">
+            <button onclick="nhuan()">Kiểm Tra</button>
+            </div>
+            
+            <div class="answer">
+                <u>Kết Quả:</u>
+                <div id="result" class="result_box"></div>
+            </div>
+            
+                
+            </div>
+                    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+    </body>
+    </html>
